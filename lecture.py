@@ -5,13 +5,13 @@ class Lecture:
         self.id = row.get('id')
         
         # cell: date
-        self.date = row.select('td')[0].getText()
+        self.date = row.select('td')[0].getText().split(', ')[1].split('.')
         
         # cell: start
-        self.startTime = row.select('td')[2].getText().strip('-').strip()
+        self.startTime = row.select('td')[2].getText().strip('-').strip().split(':')
         
         # cell: end
-        self.endTime = row.select('td')[3].getText()
+        self.endTime = row.select('td')[3].getText().strip().split(':')
         
         # cell: title
         titleRowList = row.select('td')[5].getText().split('(', 1)
@@ -44,7 +44,3 @@ class Lecture:
     def __str__(self):
         objStr = f'Event: {self.id}\nTitle: {self.title}\nDate: {self.date}\nBegin: {self.startTime}\nEnde: {self.endTime}\nDauer: {self.duration} ({self.durationMin} Minuten)\nTutor*in: {self.lecturer}\nOrt/Raum: {self.place}\nPflicht: {self.mandatory}\nEvent-Typ: {self.eventType}\nWeitere Termine des Moduls: {self.eventDates}\n'
         return objStr
-
-    def getAsIcsFile(self):
-        # icsFile = 
-        # return icsFile
