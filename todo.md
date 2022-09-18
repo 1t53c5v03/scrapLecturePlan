@@ -1,6 +1,6 @@
 # todo
 ## now
-- [ ] run existing code locally
+- [x] run existing code locally
 - [ ] push code to gh
 - [ ] lecture event to ics
 
