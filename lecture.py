@@ -44,3 +44,7 @@ class Lecture:
     def __str__(self):
         objStr = f'Event: {self.id}\nTitle: {self.title}\nDate: {self.date}\nBegin: {self.startTime}\nEnde: {self.endTime}\nDauer: {self.duration} ({self.durationMin} Minuten)\nTutor*in: {self.lecturer}\nOrt/Raum: {self.place}\nPflicht: {self.mandatory}\nEvent-Typ: {self.eventType}\nWeitere Termine des Moduls: {self.eventDates}\n'
         return objStr
+
+    def getAsIcsFile(self):
+        # icsFile = 
+        # return icsFile

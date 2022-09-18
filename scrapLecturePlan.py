@@ -1,4 +1,4 @@
-import requests, bs4
+import requests, bs4, icalendar
 from lecture import *
 
 eventTableUrl = 'https://vorlesungsplaene.th-luebeck.de/schedulesCohorten/curSem/online/online_cohort_ITS3_WiSe_2021_22.html'
